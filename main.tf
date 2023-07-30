@@ -155,7 +155,7 @@ resource "aws_route_table_association" "database" {
 }
 
 resource "aws_db_subnet_group" "db_subnet_group" {
-  name = var.project_name
+  name = var.project_name 
   subnet_ids = aws_subnet.database[*].id
   tags = var.db_subnet_group_tags
 }
